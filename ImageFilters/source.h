@@ -7,23 +7,23 @@
 class Source
 {
     public:
-        // Constructor
-        Source();
+	// Constructor
+	Source();
 
-        // Method to get image
-        Image *GetOutput()              	{ return &output_image; };
+	// Method to get image
+	Image *GetOutput()              	{ return &output_image; };
 
-        // Method for updating source pointer
-        virtual void Update();
+	// Method for updating source pointer
+	virtual void Update();
 
-        // Method for getting source name
-        virtual const char *SourceName() = 0;
+	// Method for getting source name
+	virtual const char *SourceName() = 0;
 
     protected:
-        // Other
+	// Other
 	virtual void Execute() = 0;
 
-        // Image varaible
+	// Image varaible
 	Image output_image;
 };
 
