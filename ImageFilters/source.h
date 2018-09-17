@@ -11,7 +11,7 @@ class Source
         Source();
 
         // Method to get image
-        Image *GetOutput()              { return &output_image; };
+        Image *GetOutput()              	{ return &output_image; };
 
         // Method for updating source pointer
         virtual void Update();
@@ -21,10 +21,10 @@ class Source
 
     protected:
         // Other
-	    virtual void Execute() = 0;
+	virtual void Execute() = 0;
 
         // Image varaible
-	    Image output_image;
+	Image output_image;
 };
 
 #endif
