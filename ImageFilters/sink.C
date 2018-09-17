@@ -12,10 +12,10 @@ Sink::Sink()
 
 void Sink::SetInput(Image *img)
 {
-    image = img;
+	image = img;
 }
 
 void Sink::SetInput2(Image *img)
 {
-    image2 = img;
+	image2 = img;
 }
