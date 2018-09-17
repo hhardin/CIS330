@@ -10,7 +10,8 @@ class PNMreader : public Source
 	    ~PNMreader()            { delete [] filename; };
 
         // Method for getting Source name
-        const char *SourceName(){ return "PNMreader"; };
+        const char *SourceName()    { return "PNMreader"; };
+	
         // Method for reading image
 	    void Execute();
 
