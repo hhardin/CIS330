@@ -2,25 +2,25 @@
 
 Source::Source()
 {
-    // Save the derived class that called Source
-    output_image.SetSource(this);    
+	// Save the derived class that called Source
+	output_image.SetSource(this);    
 }
 
 void Source::Update()
 {
-    // Write data to string
-    char msg[128];
-    sprintf(msg, "%s: about to execute", SourceName());
-    
-    // Log event
-    Logger::LogEvent(msg);
+	// Write data to string
+	char msg[128];
+	sprintf(msg, "%s: about to execute", SourceName());
+ 
+	// Log event
+	Logger::LogEvent(msg);
 
-    // Execute
-    Execute();
+	// Execute
+	Execute();
 
-    // Write data to string
-    sprintf(msg, "%s: done executing", SourceName());
+	// Write data to string
+	sprintf(msg, "%s: done executing", SourceName());
 
-    // Log event
-    Logger::LogEvent(msg);
+	// Log event
+	Logger::LogEvent(msg);
 };
