@@ -10,8 +10,8 @@ class DataFlowException : public exception
 {
     public:
 	// Methods for data flow execeptions
-        DataFlowException(const char *type, const char *error);
-	virtual const char  *what() const throw() { return msg; };
+	DataFlowException(const char *type, const char *error);
+	virtual const char *what() const throw()	 	 { return msg; };
 
     protected:
 	//Variable
