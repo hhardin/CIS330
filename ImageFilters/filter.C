@@ -261,21 +261,21 @@ void Grayscale::Execute()
 	Pixel *Pixmap = new Pixel[width * height];
 	int i, j;
 	for (i = 0; i < height; i++)
-	for (j = 0; j < width; j++)   
-	{
-		Pixmap[i*width + j].r =
-			((image->GetPixel(j, i)).r / 5)
-			+ ((image->GetPixel(j, i)).g / 2)
-			+ ((image->GetPixel(j, i)).b / 4);
-		Pixmap[i*width + j].g =
-			((image->GetPixel(j, i)).r / 5)
-			+ ((image->GetPixel(j, i)).g / 2)
-			+ ((image->GetPixel(j, i)).b / 4);
-		Pixmap[i*width + j].b =
-			((image->GetPixel(j, i)).r / 5)
-			+ ((image->GetPixel(j, i)).g / 2)
-			+ ((image->GetPixel(j, i)).b / 4);
-	}
+		for (j = 0; j < width; j++)   
+		{
+			Pixmap[i*width + j].r =
+				((image->GetPixel(j, i)).r / 5)
+				+ ((image->GetPixel(j, i)).g / 2)
+				+ ((image->GetPixel(j, i)).b / 4);
+			Pixmap[i*width + j].g =
+				((image->GetPixel(j, i)).r / 5)
+				+ ((image->GetPixel(j, i)).g / 2)
+				+ ((image->GetPixel(j, i)).b / 4);
+			Pixmap[i*width + j].b =
+				((image->GetPixel(j, i)).r / 5)
+				+ ((image->GetPixel(j, i)).g / 2)
+				+ ((image->GetPixel(j, i)).b / 4);
+		}
 
 	// Update source's image
 	GetOutput()->Reset(width, height);
